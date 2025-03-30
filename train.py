@@ -15,14 +15,14 @@ def train_models(X_train, y_train, n_estimators=40, max_depth=4):
     logreg = LogisticRegression(penalty='l2', solver='liblinear', random_state=42)
     rf = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth, class_weight='balanced', random_state=42)
     xgb = XGBClassifier(n_estimators=n_estimators, max_depth=max_depth, learning_rate=0.4, eval_metric='logloss', random_state=42)
-    dt = DecisionTreeClassifier(max_depth=max_depth, random_state=42)
+    # dt = DecisionTreeClassifier(max_depth=max_depth, random_state=42)
     nb = GaussianNB()
 
     models = {
         'LogisticRegression': logreg.fit(X_train, y_train),
         'RandomForest': rf.fit(X_train, y_train),
         'XGBoost': xgb.fit(X_train, y_train),
-        'DecisionTree': dt.fit(X_train, y_train),
+        # 'DecisionTree': dt.fit(X_train, y_train),
         'NaiveBayes': nb.fit(X_train, y_train)
     }
 
