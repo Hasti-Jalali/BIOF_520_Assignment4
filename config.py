@@ -1,0 +1,8 @@
+# config.py
+
+# Global configuration values
+SEED = 42
+TOP_N_GENES = 150
+PCA_VARIANCE_THRESHOLD = 0.9
+N_NEIGHBORS_IMPUTE = 3
+RANDOM_STATE = 42
