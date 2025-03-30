@@ -26,5 +26,5 @@ def train_models(X_train, y_train, n_estimators=40, max_depth=4):
         'NaiveBayes': nb.fit(X_train, y_train)
     }
 
-    return models
+    return models, logreg, rf, xgb, nb
 
